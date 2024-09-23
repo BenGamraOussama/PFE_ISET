@@ -1,0 +1,35 @@
+ /* Styles pour l'image miniature */
+ .image-thumbnail {
+  width: 100px; /* Taille initiale de l'image */
+  transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+}
+
+/* Styles pour l'image agrandie */
+.image-full {
+  max-width: 80%; /* Taille maximale de l'image agrandie */
+  max-height: 80%;
+  position: fixed; /* Position fixe pour centrer l'image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Assure que l'image agrandie est au-dessus de tout le reste */
+  opacity: 0; /* Image initialement invisible */
+  pointer-events: none; /* Désactive les événements de souris pour l'image initialement */
+  transition: opacity 0.3s ease; /* Transition pour l'effet d'apparition */
+}
+
+/* Style pour la case à cocher */
+#zoom-checkbox {
+  display: none; /* Masquer la case à cocher */
+}
+
+/* Style pour l'état "checked" de la case à cocher */
+#zoom-checkbox:checked + .image-thumbnail + .image-full {
+  opacity: 1; /* Rendre l'image agrandie visible */
+  pointer-events: auto; /* Activer les événements de souris pour l'image agrandie */
+}
+
+/* Style pour l'image agrandie lorsqu'elle est cliquée */
+#zoom-checkbox:checked + .image-thumbnail {
+  transform: scale(1.2); /* Agrandissement de l'image miniature */
+}

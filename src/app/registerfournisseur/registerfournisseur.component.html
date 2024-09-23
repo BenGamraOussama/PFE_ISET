@@ -1,0 +1,56 @@
+<form (ngSubmit)="addNewFournisseur()" [formGroup]="FournisseurForm">
+              
+  <div class="form-floating mb-4">
+    <input formControlName="nom" type="text" class="form-control" >
+    <label for="registerUserNameInput">nom</label>
+    <div *ngIf="nom?.touched && nom?.invalid">
+      <small class="text-danger" *ngIf="nom?.errors?.['required']">le nom est obligatoire</small>
+    </div>
+  </div>
+ 
+
+  <div class="form-floating mb-4">
+    <input formControlName="prenom"  type="text" class="form-control">
+    <label for="registerUserNameInput">prenom</label>
+    <div *ngIf="prenom?.touched && prenom?.invalid">
+      <small class="text-danger" *ngIf="prenom?.errors?.['required']">le prenom est obligatoire</small>
+    </div>
+  </div>
+ 
+  
+  <div class="form-floating mb-4">
+    <input formControlName="telephone"  type="text" class="form-control " >
+    <label for="registerUserNameInput">telephone</label>
+    <div *ngIf="telephone?.touched && telephone?.invalid">
+      <small class="text-danger" *ngIf="telephone?.errors?.['required']">le telephone est obligatoire</small>
+    </div>
+  </div>
+ 
+ 
+  
+
+  <div class="form-floating mb-4">
+    <input formControlName="email"  type="text" class="form-control" >
+    <label for="registerUserEmailInput">Email  </label>
+    <div *ngIf="email?.touched && email?.invalid">
+      <small class="text-danger" *ngIf="email?.errors?.['required']">l'email
+          est obligatoire</small>
+          <small class="text-danger" *ngIf="email?.errors?.['email']">respecter le format d'email</small>
+  </div>
+  </div>
+  
+  
+
+  <div class="form-label-fixed mb-4">
+    <label for="registerPasswordInput" class="form-label">mot de passe </label>
+    <input formControlName="mdp"  type="password" class="form-control " >
+    <div *ngIf="mdp?.touched && mdp?.invalid">
+      <small class="text-danger" *ngIf="mdp?.errors?.['required']">Le mot de passe est obligatoire</small>
+      <small class="text-danger" *ngIf="mdp?.errors?.['maxlength']">Maximum 8 caractères</small>
+  </div>
+  </div>
+ 
+  <button class="btn btn-primary" type="submit">Inscription</button>
+
+  
+</form>

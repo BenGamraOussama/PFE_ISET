@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zxx">
+
+<!-- Mirrored from uomo-html.flexkitux.com/Demo3/reset_password.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Mar 2024 08:38:38 GMT -->
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="author" content="flexkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <!-- Document Title -->
+  <title>Reset Password | Uomo eCommerce HTML5 Template</title>
+
+</head>
+
+<body>
+
+   <!-- Header Type 1 -->
+  
+    <app-header></app-header>
+
+  <!-- End Header Type 1 -->
+
+  <main>
+    <div class="mb-4 pb-4"></div>
+    <div class="mb-4 pb-4"></div>
+    <div class="mb-4 pb-4"></div>    <section class="login-register container">
+      <h2 class="section-title text-center fs-3 mb-xl-5">Réinitialiser votre mot de passe</h2>
+      <p>Nous vous enverrons un e-mail pour réinitialiser votre mot de passe.</p>
+      <div class="reset-form">
+        <form name="reset-form" class="needs-validation" (ngSubmit)="resetmdpfrs()" [formGroup]="resetForm">
+          <div class="form-floating mb-3">
+            <input formControlName="email" name="register_email" type="email" class="form-control form-control_gray" id="customerEmailRegisterInput" placeholder="Email" >
+            <label for="customerEmailRegisterInput">Email </label>
+          </div>
+
+          <button class="btn btn-primary w-100 text-uppercase" type="submit">Envoyer</button>
+
+          <div class="customer-option mt-4 text-center">
+            <span class="text-secondary">Back to</span>
+            <a href="login_register.html" class="btn-text js-show-register">Login</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="mb-5 pb-xl-5"></div>
+  
+  
+ <!-- Footer Type 1 -->
+    <app-footer></app-footer>
+  <!-- End Footer Type 1 -->
+
+
+</body>
+
+<!-- Mirrored from uomo-html.flexkitux.com/Demo3/reset_password.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Mar 2024 08:38:38 GMT -->
+</html>

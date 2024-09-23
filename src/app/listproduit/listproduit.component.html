@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zxx">
+
+<!-- Mirrored from uomo-html.flexkitux.com/Demo3/account_orders.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Mar 2024 08:38:38 GMT -->
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="author" content="flexkit">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <!-- Document Title -->
+  <title>Orders | Uomo eCommerce HTML5 Template</title>
+
+</head>
+
+<body>
+  <!-- Header Type 1 -->
+  
+    <app-header></app-header>
+
+  <!-- End Header Type 1 -->
+
+  <main>
+    <div class="mb-4 pb-4"></div>
+    <div class="mb-4 pb-4"></div>
+    <div class="mb-4 pb-4"></div>    
+    <section class="my-account container">
+      <h2 class="page-title">Orders</h2>
+      <div class="row">
+        <div class="col-lg-2">
+          <app-menufrs></app-menufrs>
+
+        </div>
+        <div class="col-lg-10">
+          <div class="page-content my-account__orders-list">
+            <table class="orders-table">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Nom</th>
+                  <th>Description</th>
+                  <th>Prix</th>
+                  <th>Quantité</th>
+                  <th>Categorie</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let produit of listProduit">
+                  <td>
+                    <!-- Ajouter une balise label avec la classe "image-label" pour simuler le clic -->
+                    <label class="image-label">
+                      <!-- Ajouter une balise input de type "checkbox" pour détecter le clic -->
+                      <input type="checkbox" id="zoom-checkbox">
+                      <!-- Ajouter la classe "image-thumbnail" à l'image miniature pour gérer son style -->
+                      <img src="{{ produit.image }}" class="image-thumbnail" width="100">
+                      <!-- Ajouter la classe "image-full" à l'image agrandie pour gérer son style -->
+                      <img src="{{ produit.image }}" class="image-full">
+                    </label>
+                  </td> 
+                  <td>{{produit.nom}}</td>
+                  <td>{{produit.description}}</td>
+                  <td>{{produit.prix}}</td>
+                  <td>{{produit.quantite}}</td>
+                  <td>{{produit.categorie.nom }}</td>
+
+                <td>
+                  <a href="/modifierproduit/{{produit.id}}"  type="submit" class="btn"><i class="fas fa-edit"></i></a>
+                  <button (click)="deleteProduit(produit)" type="submit" class="btn"><i class="fas fa-trash"></i></button></td>
+            </tr>
+           
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mb-5 pb-xl-5"></div>
+  
+   <!-- Footer Type 1 -->
+    <app-footer></app-footer>
+  <!-- End Footer Type 1 -->
+
+
+
+</body>
+
+<!-- Mirrored from uomo-html.flexkitux.com/Demo3/account_orders.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Mar 2024 08:38:38 GMT -->
+</html>

@@ -1,0 +1,17 @@
+
+<form name="register-form" class="needs-validation" (ngSubmit)="login()" [formGroup]="loginForm" >
+    <div class="form-floating mb-3">
+      <input formControlName="email"  type="email" class="form-control form-control_gray" placeholder="Email" >
+      <label for="customerEmailRegisterInput">Email </label>
+    </div>
+
+    <div class="pb-3"></div>
+
+    <div class="form-floating mb-3">
+      <input formControlName="mdp" type="password" class="form-control form-control_gray" placeholder="mot de passe" >
+      <label for="customerPasswodRegisterInput">Mot de passe</label>
+    </div>
+    <a href="/resetmdpfrs" class="btn-text ms-auto">Mot de passe oublier?</a>
+
+    <button class="btn btn-primary w-100 text-uppercase" type="submit">Connexion</button>
+  </form>

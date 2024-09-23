@@ -1,0 +1,6 @@
+<ul class="account-nav">
+    <li><a href="dashboard" class="menu-link menu-link_us-s">Tableau de bord</a></li>
+    <li><a href="listproduit" class="menu-link menu-link_us-s">Liste des commandes</a></li>
+    <li *ngIf="userRole === 'client'"><a href="modliv/{{userDetails.id}}" class="menu-link menu-link_us-s">Paramètre</a></li>
+    <li><a href="javascript:void(0);" class="menu-link menu-link_us-s" (click)="deconnexion()">Déconnexion</a></li>
+  </ul>

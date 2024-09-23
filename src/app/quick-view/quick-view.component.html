@@ -1,0 +1,85 @@
+  <!-- Header Type 1 -->  
+    <app-header></app-header>
+  <!-- /.header__tools -->
+
+<main>
+  <div class="mb-4 pb-4"></div>
+  <div class="mb-4 pb-4"></div>
+  <div class="mb-4 pb-4"></div>
+      <section class="product-single container">
+      <div class="row"  *ngIf="produit">
+        <div class="col-lg-7">
+          <div class="product-single__media" data-media-type="vertical-thumbnail">
+            <div class="product-single__image">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide product-single__image-item">
+                    <img loading="lazy" class="h-auto" src="{{produit.image}}" width="674" height="674" alt="">
+                    <a data-fancybox="gallery" href="{{produit.image}}" data-bs-toggle="tooltip" data-bs-placement="left" title="Zoom">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><use href="#icon_zoom" /></svg>
+                    </a>
+                  </div>
+            
+                </div>
+               
+              </div>
+            </div>
+            <div class="product-single__thumbnail">
+              <div class="swiper-container">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+      
+          <h1 class="product-single__name">le nom de produit: {{produit.nom}}</h1>
+          <div class="product-single__rating">
+            <div class="reviews-group d-flex">
+              <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><use href="#icon_star" /></svg>
+              <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><use href="#icon_star" /></svg>
+              <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><use href="#icon_star" /></svg>
+              <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><use href="#icon_star" /></svg>
+              <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><use href="#icon_star" /></svg>
+            </div>
+            <span class="reviews-note text-lowercase text-secondary ms-1">8k+ reviews</span>
+          </div>
+      
+          <div class="product-single__price">
+            <span class="current-price">le prix :{{produit.prix}}dt</span>
+          </div>
+          <div class="product-single__short-desc">
+            <span class="current-price">quantité: on a {{produit.quantite}}  produit(s)</span>
+          </div>
+          <div class="product-single__short-desc">
+            <p>le description est: {{produit.description}}</p>
+          </div>
+          <form name="addtocart-form" method="post">
+            <div class="product-single__addtocart">
+           
+              <button  *ngIf="role==='client'" type="submit" class="btn btn-primary btn-addtocart js-open-aside" data-aside="cartDrawer">ajouter aux panier</button>
+            </div>
+
+            <div class="product-single__addtolinks">
+                <a href="#" class="menu-link menu-link_us-s add-to-wishlist"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><use href="#icon_heart" /></svg><span>Add to Wishlist</span></a>
+                
+                <script src="js/details-disclosure.js" defer="defer"></script>
+                <script src="js/share.js" defer="defer"></script>
+              </div>
+          </form>
+         
+        
+        </div>
+      </div>
+    
+    </section>
+   
+  </main>
+
+   
+  <!-- Footer Type 1 -->
+ <!-- Footer Type 1 -->
+ <footer class="footer footer_type_1">
+    <app-footer></app-footer>
+  </footer><!-- /.footer footer_type_1 -->
+  <!-- End Footer Type 1 -->

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zxx">
+
+<!-- Mirrored from uomo-html.flexkitux.com/Demo3/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Mar 2024 08:38:37 GMT -->
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="author" content="flexkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <!-- Document Title -->
+  <title>Contact Us | Uomo eCommerce HTML5 Template</title>
+
+</head>
+
+<body>
+
+
+
+  <!-- Header Type 1 -->
+  
+      <app-header></app-header>
+  
+  <!-- End Header Type 1 -->
+
+  <main>
+    <div class="mb-4 pb-4"></div>
+    <div class="mb-4 pb-4"></div>
+    <div class="mb-4 pb-4"></div>
+    <div class="contact-us container">
+      <div class="mw-930">
+        <h2 class="page-title">CONTACTEZ-NOUS</h2>
+      </div>
+    </div>
+    
+    <div class="google-map mb-5">
+      <h2 class="d-none">CONTACTEZ-NOUS</h2>
+    </div>
+
+    <section class="contact-us container">
+      <div class="mw-930">
+        <div class="row mb-5">
+          <div class="col-lg-6">
+            <h3 class="mb-4">Tunisia</h3>
+            <p class="mb-4">Makthar, Siliana,<br>Tunisia</p>
+            <p class="mb-4">oussamagamra52@gmail.com<br>+216 27 448 125</p>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="mb-4">Tunisie</h3>
+            <p class="mb-4">Makthar, Siliana,<br>Tunisia</p>
+            <p class="mb-4">oussamagamra52@gmail.com<br>+216 27 448 125</p>
+          </div>
+        </div>
+        <div class="contact-us__form">
+          <form name="contact-us-form" class="needs-validation" novalidate (ngSubmit)="addNewContacts()" [formGroup]="contactsForm">
+            <div class="row">
+              <h3 class="mb-5">Envoyer un message</h3>
+              <div class="col-md-12">
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control"  placeholder="Nom" required formControlName="nom">
+                  <label for="account_first_name">Nom</label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control"  placeholder="Email" required formControlName="email">
+                  <label for="account_first_name">Email</label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control"  placeholder="Téléphone" required formControlName="telephone">
+                  <label for="account_first_name">Téléphone</label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control"  placeholder="Sujet" required formControlName="sujet">
+                  <label for="account_first_name">Sujet</label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-floating my-3">
+                  <textarea class="form-control form-control_gray" placeholder="Votre Message" cols="30" rows="8" formControlName="message" required></textarea>                  
+                    <label for="account_first_name">Votre Message</label>
+                  
+                </div>
+              </div>
+              <div class="my-4">
+              </div>
+              <div class="my-4">
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mb-5 pb-xl-5"></div>
+  
+  <!-- Footer Type 1 -->
+ 
+    <app-footer></app-footer>
+ <!-- /.footer footer_type_1 -->
+  <!-- End Footer Type 1 -->
+
+
+
+
+
+
+
+</body>
+
+<!-- Mirrored from uomo-html.flexkitux.com/Demo3/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Mar 2024 08:38:37 GMT -->
+</html>

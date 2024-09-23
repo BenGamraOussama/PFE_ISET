@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demo.harnishdesign.net/html/koice/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Jun 2020 13:55:07 GMT -->
+
+<body>
+    <!-- Container -->
+    <div class="container-fluid invoice-container">
+        <!-- Header -->
+        <header>
+            <div class="row align-items-center">
+                <div class="col-sm-7 text-center text-sm-left mb-3 mb-sm-0">
+                    <img id="logo" src="assets/images/nvlogo-removebg-preview.png" title="Invoice" alt="Invoice" style="width: 30%;" />
+                </div>
+                <div class="col-sm-5 text-center text-sm-right">
+                    <h4 class="text-7 mb-0">Facture</h4>
+                </div>
+            </div>
+            <hr>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="row">
+                <div class="col-sm-6"><strong>Date:</strong> {{this.date | date:'mediumDate'}}</div>
+                <div class="col-sm-6 text-sm-right"> <strong>Facture N°:</strong>{{this.service.facture.id}}</div>
+
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 text-sm-right order-sm-1"> <strong>De la part:</strong>Ben Gamra Oussama
+                    <address>
+                        <strong>Téléphone:</strong>(+216) 27 448 125 <br>
+                        <strong>E-mail:</strong>oussamagamra52@gmail.com <br>
+                        <strong>Adresse:</strong>Makthar, Siliana, Tunisie. <br>
+                    </address>
+                </div>
+              
+                <div class="col-sm-6 order-sm-0"> <strong>Facture a :</strong>
+                    
+                    <br>
+                    <qr-code [value]="this.service.facture.commandeDto.client.qrcode"></qr-code>
+
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header px-2 py-0">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th><strong>Produit</strong></th>
+                                <th><strong>Nom</strong></th>
+                                <th><strong>Date</strong></th>
+                                <th><strong>Prix</strong></th>
+                                <th><strong>QTY</strong></th>
+                                <th><strong>Total</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of this.service.facture?.commandeMatieresDtoList">
+                                <td><img [src]="item?.produitDto?.image" alt="Produit Image" class="item-img" /></td>
+                                <td>{{item?.produitDto?.nom}}</td>
+                                <td>{{this.date | date:'mediumDate'}}</td>
+                                <td>{{item?.produitDto?.prix}} DT</td>
+                                <td>{{item?.quantite}}</td>
+                                <td>{{item?.produitDto?.prix * item?.quantite}} DT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+        </main>
+        <!-- Footer -->
+        <footer class="text-center mt-4">
+
+            <p class="text-1"><strong>REMARQUE :</strong> Il s'agit d'un reçu généré par ordinateur et ne nécessite pas de signature physique.</p>
+            <div class="btn-group btn-group-sm d-print-none"> <a href="commandeLivreur" class="btn btn-primary ">Retour</a> &nbsp;&nbsp;
+                <a href="javascript:window.print()" class="btn btn-light border text-black-50 shadow-none"><i class="fa fa-print"></i> Impression</a>
+                 <button *ngIf="!this.service.facture?.commandeDto.livred" type="button" class="btn btn-primary ml-1"
+                    (click)="confirmerLiv(this.service.facture.id)">Confirmer la livraison</button>
+                <!--<a href="#" class="btn btn-light border text-black-50 shadow-none"><i class="fa fa-download"></i> Download</a>-->
+            </div>
+            <div [innerHtml]="message"></div>
+        </footer>
+    </div>
+</body>
+
+<!-- Mirrored from demo.harnishdesign.net/html/koice/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Jun 2020 13:55:14 GMT -->
+
+</html>

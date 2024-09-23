@@ -1,0 +1,33 @@
+
+<form (ngSubmit)="login()" [formGroup]="loginForm">
+  <div class="form-floating mb-3">
+    <input formControlName="email"  type="text" class="form-control " id="email">
+    <label for="customerNameEmailInput1">adresse email </label>
+    <div *ngIf="email?.touched && email?.invalid">
+      <small class="text-danger" *ngIf="email?.errors?.['required']">l'email
+          est obligatoire</small>
+          <small class="text-danger" *ngIf="email?.errors?.['email']">respecter le format d'email</small>
+  </div>
+  </div>
+ 
+  <div class="pb-3"></div>
+
+  <div class="form-floating mb-3">
+    <input formControlName="mdp"  type="password" class="form-control " id="mdp">
+    <label for="customerPasswodInput">mot de passe</label>
+    <div *ngIf="mdp?.touched && mdp?.invalid">
+      <small class="text-danger" *ngIf="mdp?.errors?.['required']">Le mot de passe est obligatoire</small>
+  </div>
+  </div>
+  
+
+  <div class="d-flex align-items-center mb-3 pb-2">
+    <div class="form-check mb-0">
+      <input name="remember" class="form-check-input form-check-input_fill" type="checkbox" value="" id="flexCheckDefault1">
+      <label class="form-check-label text-secondary" for="flexCheckDefault1">Remember me</label>
+    </div>
+    <a href="resetmdpfrs" class="btn-text ms-auto">mot de passe oublié?</a>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Connexion</button>
+</form>

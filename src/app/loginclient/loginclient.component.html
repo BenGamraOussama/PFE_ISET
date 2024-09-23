@@ -1,0 +1,28 @@
+<form name="register-form" class="needs-validation" (ngSubmit)="login()" [formGroup]="loginForm" >
+  <div class="form-floating mb-3">
+    <input formControlName="email"  type="email" class="form-control form-control_gray" placeholder="Email" >
+    <label for="customerEmailRegisterInput">Email </label>
+  </div>
+
+  <div class="pb-3"></div>
+
+  <div class="form-floating mb-3">
+    <input formControlName="mdp"  type="password" class="form-control form-control_gray" placeholder="mot de passe" >
+    <label for="customerPasswodRegisterInput">Mot de passe</label>
+  </div>
+  <div class="d-flex align-items-center mb-3 pb-2">
+    <div class="form-check mb-0">
+      <input name="remember" class="form-check-input form-check-input_fill" type="checkbox" value="" id="flexCheckDefault1">
+      <label class="form-check-label text-secondary" for="flexCheckDefault1">Remember me</label>
+    </div>
+    <a href="resetmdpcl" class="btn-text ms-auto">mot de passe oublié?</a>
+  </div>
+
+  <button class="btn btn-primary w-100 text-uppercase" type="submit">Connexion</button>
+  <div class="customer-option mt-2 text-center">
+    <span class="text-secondary">Tu est fournisseur?</span>
+    <a href="espacefrs" class="btn-text js-show-register"><br> Login en tantque fournisseur</a>
+    <a href="espaceliv" class="btn-text js-show-register"><br> Login en tantque livreur</a>
+
+  </div>
+</form>
