@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from themes.potenzaglobalsolutions.com/html/mentor-bootstrap-4-admin-dashboard-template/tables-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jan 2023 12:27:52 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <title>Mentor - Bootstrap 4 Admin Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta content="Admin template that can be used to build dashboards for CRM, CMS, etc." name="description" />
+    <meta content="Potenz Global Solutions" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+
+<body>
+    <!-- begin app -->
+    <div class="app">
+        <!-- begin app-wrap -->
+        <div class="app-wrap">
+            <!-- begin pre-loader -->
+            <div class="loader">
+                <div class="h-100 d-flex justify-content-center">
+                    <div class="align-self-center">
+                        <img src="assets/img/loader/loader.svg" alt="loader">
+                    </div>
+                </div>
+            </div>
+            <!-- end pre-loader -->
+            <!-- begin app-header -->
+           <app-header></app-header>
+            <!-- end app-header -->
+            <!-- begin app-container -->
+            <div class="app-container">
+                <!-- begin app-nabar -->
+               <app-menu></app-menu>
+                <!-- end app-navbar -->
+                <!-- begin app-main -->
+                <div class="app-main" id="main">
+                    <!-- begin container-fluid -->
+                    <div class="container-fluid">
+                        <!-- begin row -->
+                        <div class="row">
+                            <div class="col-md-12 m-b-30">
+                                <!-- begin page title -->
+                                <div class="d-block d-sm-flex flex-nowrap align-items-center">
+                                    <div class="page-title mb-2 mb-sm-0">
+                                        <h1>List Colis</h1>
+                                    </div>
+                                    <div class="ml-auto d-flex align-items-center">
+                                        <nav>
+                                            <ol class="breadcrumb p-0 m-b-0">
+                                                <li class="breadcrumb-item">
+                                                    <a href="index.html"><i class="ti ti-home"></i></a>
+                                                </li>
+                                                <li class="breadcrumb-item">
+                                                    Tables
+                                                </li>
+                                                <li class="breadcrumb-item active text-primary" aria-current="page">List colis</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <!-- end page title -->
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <!-- begin row -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card card-statistics">
+                                    <div class="card-body">
+                                        <div class="datatable-wrapper table-responsive">
+                                            <table id="datatable" class="display compact table table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>IdCommande</th>
+                                                        <th>produit</th>
+                                                        <th>Quantité</th>
+                                                        <th>Client</th>
+                                                        <th>Fournisseur</th>
+                                                        <th>livrer</th> 
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr *ngFor="let commandeProduit of listCommandeProduit  |paginate:{itemsPerPage:10,currentPage:p}">
+                                                        <td>{{commandeProduit.id}}</td>
+                                                        <td>ID:{{commandeProduit.produit.id}}<br>Nom:{{commandeProduit.produit.nom}}</td>
+                                                        <td>{{commandeProduit.quantite}}</td>
+                                                        <td>Nom:{{commandeProduit.commande.client.nom}}<br>Telephone:{{commandeProduit.commande.client.telephone}}</td>                                      
+                                                        <td>ID:{{commandeProduit.produit.fournisseur.id}}<br>Nom:{{commandeProduit.produit.fournisseur.nom}}</td>
+                                                        <td>{{commandeProduit.commande.livred}}</td>
+                                                       
+                                                    </tr>
+                                                 
+                                                   
+                                                    </tbody>
+                                            </table>
+                                            <pagination-controls style="text-align: right;" (pageChange)="p = $event"></pagination-controls>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end container-fluid -->
+                </div>
+                <!-- end app-main -->
+            </div>
+            <!-- end app-container -->
+            <!-- begin footer -->
+           <app-footer></app-footer>
+            <!-- end footer -->
+        </div>
+        <!-- end app-wrap -->
+    </div>
+    <!-- end app -->
+</body>
+
+
+<!-- Mirrored from themes.potenzaglobalsolutions.com/html/mentor-bootstrap-4-admin-dashboard-template/tables-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jan 2023 12:27:52 GMT -->
+</html>

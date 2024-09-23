@@ -1,0 +1,54 @@
+<aside class="app-navbar">
+    <!-- begin sidebar-nav -->
+    <div class="sidebar-nav scrollbar scroll_light">
+        <ul class="metismenu " id="sidebarNav">
+            <li class="nav-static-title">Personal</li>
+            <li>
+                <a href="home" aria-expanded="false">
+                    <i class="nav-icon ti ti-home"></i>
+                    <span class="nav-title">Tableau de bord</span>
+    
+                </a>
+            </li>
+            <li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="nav-icon ti ti-user"></i><span class="nav-title">Administrateur</span></a>
+                <ul aria-expanded="false">
+                    <li *ngIf="(role === 'Super-Admin')||(role === 'Admin')"> 
+                        <a href='ajouterAdmin'>Ajouter Administrateurs</a> </li>
+                    <li> <a href='listAdmin'>List d'Administrateurs</a> </li>
+                                </ul>
+            </li>
+            <li>
+                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="bi bi-people"></i><span class="nav-title">Fournisseur</span> </a>
+                <ul aria-expanded="false">
+                    <li> <a href="listfournisseur">List Fournisseur</a> </li>
+                </ul>
+            </li>
+            
+            <li>
+                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="nav-icon ti ti-truck"></i><span class="nav-title">Livreur</span> </a>
+                <ul aria-expanded="false">
+                    <li> <a href="ajouterlivreur">Ajouter Livreur</a> </li>
+                    <li> <a href="listlivreur">List Livreur</a> </li>
+                </ul>
+            </li>
+            <li><a href="listclient" aria-expanded="false"><i class="bi bi-people"></i><span class="nav-title">Client</span></a> </li>
+            <li><a href="listproduit" aria-expanded="false"><i class="bi bi-shop"></i><span class="nav-title">Produit</span></a> </li>
+            <li>
+                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="bi bi-list"></i><span class="nav-title">Categorie</span> </a>
+                <ul aria-expanded="false">
+                    <li> <a href="listcategorie">List de Categories</a> </li>
+                    <li> <a href="ajoutercategorie"> Ajouter Categorie</a> </li>
+                </ul>
+            </li>
+            <li>
+                <a href="listcolis" aria-expanded="false"><i class="bi bi-box"></i> <span class="nav-title">Colis</span></a>
+            </li>
+            <li><a href="affcom" aria-expanded="false"><i class="bi bi-command"></i><span class="nav-title">Commandes</span></a> </li>
+
+            
+            <li><a href="listcontact" aria-expanded="false"><i class="nav-icon ti ti-email"></i><span class="nav-title">Messages</span></a> </li>
+           
+        </ul>
+    </div>
+    <!-- end sidebar-nav -->
+</aside>
